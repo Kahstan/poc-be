@@ -1,6 +1,5 @@
 const express = require("express");
 const axios = require("axios");
-const { saveAs } = require("file-saver");
 const fs = require("fs");
 const data2 = require("./data")
 const app = express();
@@ -11,7 +10,6 @@ app.get("/", async (req, res) => {
         // too many requests...
         // const response = await axios.get("https://api.publicapis.org/entries");
         // const data = response.data.entries;
-
         const jsonkeys = Object.keys(data2[0]);
         const headerData = jsonkeys.join(",");
 
@@ -23,6 +21,7 @@ app.get("/", async (req, res) => {
 
         const json2csv = `${headerData}\n${rowData.join("\n")}`;
 
+        // similar method to fe but able to use fs module to handle this.
         fs.writeFileSync("output.csv", json2csv)
 
         fs.closeSync(2)

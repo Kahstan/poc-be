@@ -54,15 +54,6 @@ const data2 = [
       "Category": "Animals"
     },
     {
-      "API": "Dog Facts",
-      "Description": "Random facts of Dogs",
-      "Auth": "",
-      "HTTPS": true,
-      "Cors": "yes",
-      "Link": "https://kinduff.github.io/dog-api/",
-      "Category": "Animals"
-    },
-    {
       "API": "Dogs",
       "Description": "Based on the Stanford Dogs Dataset",
       "Auth": "",
